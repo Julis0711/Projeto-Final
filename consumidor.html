@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Consumidor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Img/Logomlp.png" alt="Logomarca da empresa MLP" class="logo">
+        </div>
+        <a href="#" class="inicio">Início</a>
+        <div class="profile-container">
+            <img src="Img/Perfil consumidor.png" alt="Perfil do consumidor" class="profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="highlight">
+                <h1>Mercado Livre do Plástico - MLP</h1>
+            </div>
+            <h2 class="highlight">Bem-vindo(a)!</h2>
+            <p style="text-align: center;">Transformando plástico em valor: Conectando pessoas, empresas e o futuro sustentável</p>
+            
+            <table class="price-table" style="margin: 0 auto;">
+                <caption>Preços por Tipo de Plástico</caption>
+                <thead>
+                    <tr>
+                        <th>Tipo de Plástico</th>
+                        <th>Preço por Quilo (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PVC</td>
+                        <td>2,50</td>
+                    </tr>
+                    <tr>
+                        <td>PET</td>
+                        <td>1,20</td>
+                    </tr>
+                    <tr>
+                        <td>PEAD (Tampa)</td>
+                        <td>2,50</td>
+                    </tr>
+                    <tr>
+                        <td>PEAD (Tambor)</td>
+                        <td>1,50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section class="calculator">
+                <h3>Simulador de Retorno</h3>
+                <form>
+                    <label for="plastic-type">Selecione o tipo de plástico</label>
+                    <select id="plastic-type">
+                        <option value="PVC">PVC</option>
+                        <option value="PET">PET</option>
+                        <option value="PEAD_Tampa">PEAD (Tampa)</option>
+                        <option value="PEAD_Tambor">PEAD (Tambor)</option>
+                    </select>
+
+                    <label for="weight">Peso Total (Kg)</label>
+                    <input type="number" id="weight" placeholder="0,00 Kg">
+
+                    <button type="button" onclick="calcularRetorno()">Calcular</button>
+                </form>
+
+                <div class="result">
+                    <p class="return">Seu retorno é: R$ 00,00</p>
+                    <p>O valor exibido é calculado com base no tipo de plástico que você entrega e o peso total (em quilos) informado. Cada tipo de plástico tem um valor específico de mercado.</p>
+                </div>
+            </section>
+
+            <h3>Registros de Cálculos</h3>
+            <table class="register-table">
+                <thead>
+                    <tr>
+                        <th>Tipo de Plástico</th>
+                        <th>Peso (Kg)</th>
+                        <th>Retorno (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="register-table-body"></tbody>
+            </table>
+
+            <p id="total" class="highlight">Total: R$ 00,00</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mercado Livre do Plástico - MLP</p>
+    </footer>
+
+    <script>
+        let registros = [];
+
+        function calcularRetorno() {
+            const tabelaPrecos = {
+                "PVC": 2.50,
+                "PET": 1.20,
+                "PEAD_Tampa": 2.50,
+                "PEAD_Tambor": 1.50
+            };
+
+            const tipoPlastico = document.getElementById("plastic-type").value;
+            const peso = parseFloat(document.getElementById("weight").value);
+
+            if (!peso || peso <= 0) {
+                alert("Por favor, insira um peso válido.");
+                return;
+            }
+
+            const precoPorQuilo = tabelaPrecos[tipoPlastico];
+            const retorno = (precoPorQuilo * peso).toFixed(2);
+
+            document.querySelector(".return").textContent = `Seu retorno é: R$ ${retorno}`;
+
+            registros.push({
+                tipo: tipoPlastico,
+                peso: peso,
+                retorno: retorno
+            });
+
+            atualizarTabelaDeRegistros();
+        }
+
+        function atualizarTabelaDeRegistros() {
+            const tabela = document.getElementById("register-table-body");
+            tabela.innerHTML = "";
+
+            let total = 0;
+
+            registros.forEach((registro) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${registro.tipo}</td>
+                    <td>${registro.peso} Kg</td>
+                    <td>R$ ${registro.retorno}</td>
+                `;
+                tabela.appendChild(row);
+
+                total += parseFloat(registro.retorno);
+            });
+
+            document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

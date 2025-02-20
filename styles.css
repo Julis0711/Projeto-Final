@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #f5f5f5; /* Texto claro */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #30A46C; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 1px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+}
+
+header .inicio {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header .inicio:hover {
+    text-decoration: underline;
+}
+
+header .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+header .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Mercado Livre do Plástico */
+.mlp-name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 0;
+    color: #E1E1E6; /* Cor do nome */
+}
+
+/* Tabela e calculadora */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1c; /* Fundo do container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.price-table, .register-table {
+    width: 742px;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: auto;
+}
+
+.price-table caption, .register-table caption {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f5f5f5; /* Cor do texto na legenda da tabela */
+}
+
+.price-table th, .price-table td, .register-table th, .register-table td {
+    border: 1px solid #444;
+    padding: 8px;
+}
+
+.price-table th, .register-table th {
+    background-color: #333; /* Cor de fundo das células de cabeçalho */
+    color: #f5f5f5; /* Cor do texto do cabeçalho */
+}
+
+.calculator {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #2a2a2a; /* Cor do fundo da calculadora */
+    border-radius: 8px;
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.calculator label {
+    font-size: 1rem;
+}
+
+.calculator input, .calculator select, .calculator button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+.calculator input, .calculator select {
+    background-color: #1f1f1f; /* Cor do fundo dos campos */
+    color: #f5f5f5; /* Cor do texto */
+}
+
+.calculator button {
+    background-color: #30A46C; /* Cor do botão */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+    background-color: #146333; /* Cor do botão ao passar o mouse */
+}
+
+.result .return {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #30A46C; /* Cor do retorno */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #121212; /* Cor do fundo do rodapé */
+    color: #888; /* Cor do texto no rodapé */
+}
+
+.mlp-name {
+    color: #ffffff; /* Cor do nome "Mercado Livre do Plástico" */
+}
+
+.h1-highlight {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+    color: #E1E1E6;; /* Cor do destaque */
+}
+
+h2.highlight {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+    color: #30A46C; /* Cor do título "Bem-vindo!" */
+}
