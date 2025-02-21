@@ -1,0 +1,426 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #f5f5f5; /* Texto claro */
+    line-height: 1.6;
+    padding-top: 100px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    background-color: #1f8b4c; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 10px 40px; /* Diminuir o padding para tornar o cabeçalho mais fino */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Altura reduzida do cabeçalho */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 60px; /* Ajustando o tamanho do logo */
+    height: auto;
+}
+
+header .inicio {
+    color: white;
+    font-size: 1rem; /* Reduzir o tamanho da fonte */
+    text-decoration: none;
+    margin-left: 15px; /* Diminuir o espaçamento */
+}
+
+header .inicio:hover {
+    text-decoration: underline;
+}
+
+header .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+header .profile {
+    width: 60px; /* Ajustando o tamanho do ícone do perfil */
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Título e slogan no cabeçalho (lado esquerdo) */
+.header-text .mlp-name {
+    font-size: 1.2rem; /* Reduzir o tamanho do nome */
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-right: 950px;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.header-text .slogan {
+    font-size: 0.9rem; /* Reduzir o tamanho do slogan */
+    font-weight: 300;
+    color: #ffffff;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1c; /* Fundo do container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção de mercado livre */
+.titulo-container {
+    margin-bottom: 20px;
+}
+
+.titulo-container h2 {
+    margin: 0;
+    font-size: 30px; /* Tamanho do "Bem-vindo" */
+    color: #feffff;
+    text-align: left;
+}
+
+.titulo-container .titulo-text {
+    font-size: 1rem;
+    margin-top: 5px;
+    max-width: 400px; /* Espaço reduzido para o texto */
+    text-align: center; /* Alinha o texto à direita */
+    margin-right: 70%;
+}
+
+/* Seção de boas-vindas */
+.welcome-container {
+    margin-bottom: 20px;
+}
+
+.welcome-container h2 {
+    margin: 0;
+    font-size: 30px; /* Tamanho do "Bem-vindo" */
+    color: #30A46C;
+    text-align: right;
+}
+
+.welcome-container .welcome-text {
+    font-size: 1rem;
+    margin-top: 5px;
+    max-width: 400px; /* Espaço reduzido para o texto */
+    text-align: right; /* Alinha o texto à direita */
+    margin-left: 70%;
+}
+
+/* Seção Mercado Livre do Plástico */
+.mercado-livre-container {
+    margin-bottom: 20px;
+}
+
+.mercado-livre-container h2 {
+    margin: 0;
+    font-size: 30px; /* Tamanho do título */
+    color: #ffffff;
+    text-align: right; /* Alinha o título à direita */
+}
+
+.mercado-livre-container .mercado-livre-text {
+    font-size: 1rem;
+    margin-top: 5px;
+    max-width: 400px; /* Espaço reduzido para o texto */
+    text-align: right; /* Alinha o texto à direita */
+    margin-left: 70%; /* Mover o texto para a direita */
+}
+
+/* Tabelas */
+.price-table, .register-table {
+    width: 50%; /* Reduz o tamanho da tabela */
+    margin: 20px auto; /* Centraliza a tabela */
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #1c1c1c; /* Fundo da tabela */
+    border-radius: 10px;
+}
+
+.price-table caption, .register-table caption {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+.price-table th, .price-table td,
+.register-table th, .register-table td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.price-table th, .register-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.price-table tbody tr:nth-child(even), .register-table tbody tr:nth-child(even) {
+    background-color: #2a2a2a; /* Cor alternada para as linhas da tabela */
+}
+
+.price-table tbody tr:hover, .register-table tbody tr:hover {
+    background-color: #444; /* Efeito de hover para as linhas */
+}
+
+.price-table td, .register-table td {
+    background-color: #1c1c1c;
+}
+
+.price-table td, .register-table td {
+    color: #f5f5f5;
+}
+
+.price-table caption, .register-table caption {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+}
+
+/* Distanciamento de 75px entre a primeira tabela e a calculadora */
+.price-table {
+    margin-bottom: 75px;
+}
+
+/* Calculadora */
+.calculator {
+    margin: 20px 0 75px 0; /* Distância de 75px das tabelas */
+    padding: 20px;
+    background-color: #2a2a2a; /* Fundo da calculadora */
+    border-radius: 8px;
+    
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+.calculator label {
+    font-size: 1rem;
+}
+
+.calculator input{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    width: 400px;
+    text-align: center;
+}
+.calculator select{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 400px;
+    text-align: center;
+}
+
+.calculator button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+}
+
+.calculator input,
+.calculator select {
+    background-color: #1f1f1f; /* Fundo dos campos */
+    color: #f5f5f5; /* Texto dos campos */
+}
+
+.calculator button {
+    background-color: #1f8b4c; /* Botão */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+    background-color: #146333; /* Hover do botão */
+}
+
+/* Resultado */
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    margin-bottom: 30px;
+}
+
+.return-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.return {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7c8480;
+    text-align: left;
+    margin-left: 40px;
+    padding-top: 0;  /* Removendo padding para alinhar corretamente */
+    padding-right: 0;
+}
+
+.return-texto {
+    font-size: 1rem;
+    color: #f5f5f5;
+    max-width: 400px; /* Espaço reduzido para o texto */
+    text-align: justify; /* Alinha o texto à direita */
+    margin-left: 60%;
+    margin-right: 60px;
+}
+/* Container para alinhar o título com a tabela */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%;
+}
+
+.register-container h3 {
+    text-align: left;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme o tamanho da tabela */
+    margin-bottom: 10px;
+}
+
+.register-table {
+    width: 100%;
+    max-width: 600px; /* Mesmo valor do h3 para alinhar */
+    border-collapse: collapse;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #121212; /* Fundo do rodapé */
+    color: #888; /* Texto do rodapé */
+}
+
+#total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4e4c;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Outros destaques */
+.highlight {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    color: #E1E1E6;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    .price-table, .register-table {
+        width: 100%;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: row; /* Mantém em linha */
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px; /* Reduz o padding */
+      height: 50px; /* Cabeçalho menor */
+    }
+  
+    /* Centraliza o link "Início" */
+    .header-text {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .header-text .mlp-name {
+      margin: 0 auto;
+    }
+  
+    /* Remove a margem inferior que estava sendo aplicada para o empilhamento */
+    header .logo-container,
+    header .profile-container {
+      margin-bottom: 0;
+    }
+
+    .price-table, .register-table {
+        font-size: 0.8rem;
+    }
+    .calculator input, .calculator select, .calculator button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    .price-table, .register-table {
+        font-size: 0.7rem;
+    }
+    .calculator input, .calculator select, .calculator button {
+        font-size: 0.9rem;
+    }
+  
+    .welcome-container .welcome-text {
+        font-size: 0.7rem;
+        margin-top: 8px;
+        max-width: 200px; /* Espaço reduzido para o texto */
+        text-align: justify; /* Alinha o texto à direita */
+        margin-left: 40%;
+    }
+  
+    .titulo-container .titulo-text {
+        font-size: 0.9rem;
+        margin-top: 5px;
+        max-width: 200px; /* Espaço reduzido para o texto */
+        text-align: left; /* Alinha o texto à direita */
+        margin-right: 50%;
+    } 
+}
