@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Tela de login</title>
+</head>
+<body>
+    <header>
+        <img src="img/Logo.png" alt="Logomarca da empresa MLP" width="226px" height="154px">
+        <h1>Mercado Livre do Plástico - MLP</h1>
+        <p>Faça seu login e comece a lucrar!</p>
+    </header>
+
+    <main>
+        <form action="">
+            <label for="login">Digite seu login</label>
+            <div id="cpf-div">
+                <img id="cpf-img" src="img/icone_cpf-cnpj.svg" alt="Icone de CPF e CNPJ" width="24px" height="24px">
+                <input class="login" type="text" id="login" placeholder="CPF ou CNPJ" required>
+            </div>
+
+            <label for="senha">Insira sua senha</label>
+            <div id="senha-div">
+                <img id="senha-img" src="img/icone_senha.svg" alt="Icone de senha" width="24px" height="24px">
+                <input type="password" id="senha" placeholder="********" required>
+            </div>
+
+            <div class="botoes">
+                <a href="../Consumidor/consumidor.html" target="_blank">
+                    <button type="button">Acessar</button>
+                </a>
+            </div>
+        </form>
+
+        <div class="links_finais">
+            <p><a href="">Esqueceu sua senha?</a></p>
+            <p><a href="cadastro-consumidor.html">Não possui conta? Crie uma agora!</a></p>
+        </div>
+    </main>
+</body>
+</html>

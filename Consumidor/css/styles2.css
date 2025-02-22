@@ -20,33 +20,35 @@ body {
 header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 10;
     width: 100%;
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-    background-color: #1f8b4c; /* Cor de fundo do cabeçalho */
+    background-color: #30A46C; /* Cor de fundo do cabeçalho */
     color: white;
-    padding: 10px 40px; /* Diminuir o padding para tornar o cabeçalho mais fino */
+    padding: 15px 40px; /* Diminuir o padding para tornar o cabeçalho mais fino */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px; /* Altura reduzida do cabeçalho */
+    height: 95px; /* Altura reduzida do cabeçalho */
 }
 
 header .logo-container {
     display: flex;
     align-items: center;
+    margin-right: 20px; /* Ajusta a distância entre a logo e o link "Início" */
 }
 
 header .logo {
-    width: 60px; /* Ajustando o tamanho do logo */
+    width: 100px; /* Ajustando o tamanho do logo */
     height: auto;
+    margin-right: 20px; /* Afastando a logo para a direita */
 }
 
 header .inicio {
-    color: white;
+    color: #E1E1E6;
     font-size: 1rem; /* Reduzir o tamanho da fonte */
     text-decoration: none;
-    margin-left: 15px; /* Diminuir o espaçamento */
+    margin-left: 20px; /* Diminuir o espaçamento */
 }
 
 header .inicio:hover {
@@ -80,6 +82,7 @@ header .profile {
     font-weight: 300;
     color: #ffffff;
 }
+
 
 /* Container principal */
 .container {
@@ -127,7 +130,7 @@ header .profile {
     font-size: 1rem;
     margin-top: 5px;
     max-width: 400px; /* Espaço reduzido para o texto */
-    text-align: right; /* Alinha o texto à direita */
+    text-align: justify; /* Alinha o texto à direita */
     margin-left: 70%;
 }
 
@@ -293,7 +296,7 @@ header .profile {
     font-size: 1.5rem;
     font-weight: bold;
     color: #7c8480;
-    text-align: left;
+    text-align: justify;
     margin-left: 40px;
     padding-top: 0;  /* Removendo padding para alinhar corretamente */
     padding-right: 0;
