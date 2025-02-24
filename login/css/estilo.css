@@ -55,7 +55,6 @@ form input {
     background-color: #202024;
     color: #7c7c8a;
     border: none;
-    outline: none;
     width: 360px;
     height: 48px;
     padding: 12px 16px;
@@ -89,6 +88,12 @@ form button {
     top: 42px;
     left: 16px;
     margin-bottom: 16px;
+    outline: none;
+    border: none;
+}
+
+.div_inputs:focus-within {
+    border: 2px solid #30a46c;
 }
 
 #senha_confirmar-div {
