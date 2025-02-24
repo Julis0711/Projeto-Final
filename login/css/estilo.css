@@ -99,9 +99,7 @@ form button {
     margin-bottom: 0px;
 }
 
-#cpf-img, #senha-img, #nome-img, #fone-img, #email-img, #senha_criar-img,
- #senha_confirmar-img, #cadas-nome-img, #cadas-fone-img, #cadas-cnpj-img,
- #cadas-email-img, #cadas-senha_criar-img, #cadas-senha_confirmar-img {
+.img_total {
     margin: 0px 0px 0px 16px;
 }
 
