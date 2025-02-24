@@ -113,7 +113,7 @@ form button {
     gap: 16px;
 }
 
-#cadas_empresa a {
+.cadas_empresa a {
     color: #e1e1e6;
     text-decoration: none;
 }
