@@ -89,19 +89,16 @@ form button {
     border-radius: 4px;
     align-items: center;
     background-color: #202024;
-    top: 42px;
-    left: 16px;
     margin-bottom: 16px;
-    /* outline: none; */
     border: none;
 }
 
 .div_inputs:focus-within {
-    border: 2px solid #30a46c;
+    outline: 2px solid #30a46c;
 }
 
 .img_total {
-    margin: 0px 0px 0px 16px;
+    margin-left: 16px;
 }
 
 .botoes {
