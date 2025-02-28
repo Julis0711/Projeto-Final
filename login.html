@@ -31,7 +31,7 @@
             </div>
 
             <div class="botoes">
-                <a href="consumidor.html"><button type="submit">Acessar</button></a>
+                <button type="button" id="botaoAcessar">Acessar</button></a>
             </div>
         </form>
 
@@ -41,3 +41,18 @@
     </main>
 </body>
 </html>
+
+<script>
+    document.getElementById('botaoAcessar').addEventListener('click', function() {
+        // Verifica se os campos estão preenchidos
+        const login = document.getElementById('login').value;
+        const senha = document.getElementById('senha').value;
+        
+        if (login && senha) {
+            // Redireciona para a página do consumidor
+            window.location.href = 'consumidor.html';
+        } else {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+        }
+    });
+</script>
