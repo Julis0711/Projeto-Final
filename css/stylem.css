@@ -100,14 +100,6 @@ form button {
     border: 2px solid #30a46c;
 }
 
-#senha_confirmar-div {
-    margin-bottom: 0px;
-}
-
-#senha-div {
-    margin-bottom: 0px;
-}
-
 .img_total {
     margin: 0px 0px 0px 16px;
 }
@@ -115,7 +107,7 @@ form button {
 .botoes {
     display: flex;
     flex-direction: column;
-    margin-top: 39px;
+    margin-top: 23px;
     gap: 16px;
 }
 
