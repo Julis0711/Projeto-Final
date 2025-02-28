@@ -17,11 +17,11 @@
     </header>
 
     <main>
-        <form action="">
+        <form action="consumidor.html">
             <label for="login">Digite seu login</label>
             <div class="div_inputs" tabindex="0">
                 <img class="img_total" src="img/icone_cpf-cnpj.svg" alt="Icone de CPF e CNPJ" width="24px" height="24px">
-                <input class="login" type="text" id="login" placeholder="CPF ou CNPJ" required>
+                <input type="text" id="login" placeholder="CPF ou CNPJ" required>
             </div>
 
             <label for="senha">Insira sua senha</label>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="botoes">
-                <button type="button" id="botaoAcessar">Acessar</button></a>
+                <button type="submit">Acessar</button>
             </div>
         </form>
 
@@ -41,18 +41,3 @@
     </main>
 </body>
 </html>
-
-<script>
-    document.getElementById('botaoAcessar').addEventListener('click', function() {
-        // Verifica se os campos estão preenchidos
-        const login = document.getElementById('login').value;
-        const senha = document.getElementById('senha').value;
-        
-        if (login && senha) {
-            // Redireciona para a página do consumidor
-            window.location.href = 'consumidor.html';
-        } else {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-        }
-    });
-</script>

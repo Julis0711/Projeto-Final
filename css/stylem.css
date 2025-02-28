@@ -92,7 +92,7 @@ form button {
     top: 42px;
     left: 16px;
     margin-bottom: 16px;
-    outline: none;
+    /* outline: none; */
     border: none;
 }
 
@@ -121,7 +121,6 @@ form button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     font-size: 0.875rem;
     margin-top: 32px;
 }
